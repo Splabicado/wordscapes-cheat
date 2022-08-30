@@ -17,7 +17,10 @@ public class Main
 	{
 	    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	    ArrayList<String> result = new ArrayList<String>();
-	    long combinations = (length+alphabet.length()-1)/(factorial(alphabet.length())*(length-1));
+	    int combinations = (length+alphabet.length()-1)/((factorial(alphabet.length()))*(length-1));
+	    System.out.println(length);
+	    System.out.println(alphabet.length());
+	    // this prints 0, shouldnt. probably because of int limit. ask ebbert
 	    System.out.println(combinations);
 	    return result;
 	}
