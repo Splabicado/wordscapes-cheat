@@ -1,0 +1,33 @@
+//his name is josh
+
+// imports
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner scan = new Scanner(System.in);
+	    String input = scan.nextLine();
+	    makePossibleWords(5);
+	}
+	
+	public static String[] makePossibleWords(int length)
+	{
+	    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	    String[] result = new String[((length+alphabet.length())-1)/(factorial(alphabet.length())*(length-1))];
+	    System.out.println(result.length);
+	    return result;
+	}
+	
+	public static int factorial(int num)
+	{
+	    int result = num;
+	    for (int i = num-1; i>0; i--)
+	    {
+	        result*=i;
+	    }
+	    return result;
+	}
+}
