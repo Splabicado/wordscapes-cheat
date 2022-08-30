@@ -13,11 +13,12 @@ public class Main
 	    makePossibleWords(5);
 	}
 	
-	public static String[] makePossibleWords(int length)
+	public static ArrayList<String> makePossibleWords(int length)
 	{
 	    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	    String[] result = new String[((length+alphabet.length())-1)/(factorial(alphabet.length())*(length-1))];
-	    System.out.println(result.length);
+	    ArrayList<String> result = new ArrayList<String>();
+	    long combinations = (length+alphabet.length()-1)/(factorial(alphabet.length())*(length-1));
+	    System.out.println(combinations);
 	    return result;
 	}
 	
