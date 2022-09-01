@@ -13,16 +13,35 @@ public class Main
 	    makePossibleWords(5);
 	}
 	
-	public static ArrayList<String> makePossibleWords(int length)
+	public static ArrayList<String> makePossibleWords(int length, String letter1, String letter2, String letter3, String letter4, String letter5, String letter6)
 	{
-	    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	    ArrayList<String> result = new ArrayList<String>();
-	    int combinations = (length+alphabet.length()-1)/((factorial(alphabet.length()))*(length-1));
-	    System.out.println(length);
-	    System.out.println(alphabet.length());
-	    // this prints 0, shouldnt. probably because of int limit. ask ebbert
+	    String alphabet = "abcdefghijklmnopqrstuvwxyz";
+	    String result = "";
+	    for (int i = 0; i<length; i++)
+	    {
+	        result+="a";
+	    }
+	    
+	    for (int t = 0; t<alphabet.length(); t++)
+	    {
+	        for (int y = 0; y<alphabet.length(); y++)
+	        {
+	            for (int u = 0; u<alphabet.length(); u++)
+	            {
+	                for (int i = 0; i<alphabet.length(); i++)
+	                {
+	                    for (int o = 0; o<alphabet.length(); o++)
+	                    {
+	                        for (int p = 0; p<alphabet.length(); p++)
+	                        {
+	                            
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    }
 	    System.out.println(combinations);
-	    return result;
 	}
 	
 	public static int factorial(int num)
